@@ -4,3 +4,13 @@ npm install hbs  --> Handlebars
 -->Decir a nodemon que este pendiente de los cambios de los archivos con esas extensiones cuando se guarda el archivo y compile automaticamente para ver los cambios
 nodemon server -e js,hbs,html,css   
 -->Los helpers son una funcion que se ejecuta cuando el template lo requiere
+
+--><--
+Para desplegar a heroku
+>>en app.listen cambiar el puerto 3000 por 'port'
+>>añadir la linea. En un entorno de produccion el servidor asigna un puerto, si se ejecuta en entorno local se asigna 3000
+const port = process.env.PORT || 3000;
+
+>>Para decirle a heroku que ejecute el comando node server.js para iniciar la aplicacion
+    >>En el archivo package.json en "scripts" añadir
+        >>"start": "node server.js",

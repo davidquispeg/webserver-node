@@ -3,6 +3,7 @@ const app = express();
 const hbs = require('hbs');
 //importa los helpers
 require('./hbs/helpers');
+const port = process.env.PORT || 3000;
 //El middleware es una funcion que se ejecuta siempre sin importar el URI que se solicita
 app.use(express.static(__dirname + '/public'));
 //Para heredar plantillas
@@ -28,7 +29,7 @@ app.get('/about', (req, res) => {
         res.send(salida);
         //res.send('Hola Mundo')
     })*/
-app.listen(3000, () => {
+app.listen(port, () => {
     //se ejecuta cuando la peticion se ejecuta
-    console.log('Escuchando en el puerto 3000')
+    console.log(`Escuchando en el puerto ${port}`);
 })
