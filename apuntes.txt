@@ -1,0 +1,6 @@
+npm install express
+npm install hbs  --> Handlebars
+
+-->Decir a nodemon que este pendiente de los cambios de los archivos con esas extensiones cuando se guarda el archivo y compile automaticamente para ver los cambios
+nodemon server -e js,hbs,html,css   
+-->Los helpers son una funcion que se ejecuta cuando el template lo requiere
